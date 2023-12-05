@@ -31,6 +31,6 @@ public class notFoundTest {
         searchBar.sendKeys(Keys.ENTER);
         WebElement nothingFound = driver.findElement(By.cssSelector("[aria-level='3']"));
         Boolean result = nothingFound.getText().equals("Па запыце -DskipTests=true нічога не знойдзена");
-        Assert.assertTrue(result);
+        Assert.assertTrue(result, "Results are shown");
     }
 }

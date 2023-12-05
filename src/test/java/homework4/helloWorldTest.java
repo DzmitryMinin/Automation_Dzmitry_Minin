@@ -31,6 +31,6 @@ public class helloWorldTest {
         searchBar.sendKeys(Keys.ENTER);
         WebElement allTab = driver.findElement(By.cssSelector("[class='hdtb-mitem hdtb-msel']"));
         Boolean result = allTab.isDisplayed();
-        Assert.assertTrue(result);
+        Assert.assertTrue(result, "Results page is not opened");
     }
 }
