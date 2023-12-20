@@ -1,19 +1,41 @@
 package pageObjects.baseObjects;
 
 import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
+import org.openqa.selenium.interactions.Actions;
+import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.WebDriverWait;
 
+import java.time.Duration;
 import java.util.Arrays;
 
 import static driver.DriverCreation.getDriver;
 
 public abstract class BasePage {
+    protected WebDriver driver;
+    protected WebDriverWait wait;
+    protected Actions actions;
+
+    {
+        driver = getDriver();
+        wait = new WebDriverWait(driver, Duration.ofSeconds(20));
+        actions = new Actions(driver);
+    }
+
+    protected void navigateTo(String url) {
+        System.out.println("Navigate to :: " + url);
+        driver.get(url);
+    }
+
     protected void click(By by) {
-        click(getDriver().findElement(by));
+        wait.until(ExpectedConditions.elementToBeClickable(by));
+        click(driver.findElement(by));
     }
 
     protected void click(WebElement element) {
         System.out.println("Click on element: " + element);
+        wait.until(ExpectedConditions.elementToBeClickable(element));
         element.click();
     }
 
