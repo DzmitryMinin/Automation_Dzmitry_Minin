@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="homework 9">
+    <parameter name="url" value="https://saucedemo.com/"></parameter>
+    <test name="Login Data Provider Test">
+        <classes>
+            <class name="homework9.LoginDataProviderTest"/>
+        </classes>
+    </test>
+
+    <parameter name="url" value="https://saucedemo.com/"></parameter>
+    <parameter name="password" value="secret_sauce"></parameter>
+    <parameter name="userName" value="standard_user"></parameter>
+    <test name="Products Data Provider Test">
+        <classes>
+            <class name="homework9.ProductsDataProviderTest"/>
+        </classes>
+    </test>
+
+    <parameter name="url" value="https://saucedemo.com/"></parameter>
+    <parameter name="password" value="secret_sauce"></parameter>
+    <parameter name="userName" value="standard_user"></parameter>
+    <test name="Products Invocation Counter Test">
+        <classes>
+            <class name="homework9.ProductsInvocationCountTest"></class>
+        </classes>
+    </test>
+
+</suite>

@@ -11,7 +11,7 @@ public class BaseTest {
         createDriver(CHROME);
     }
 
-    @AfterTest
+    @AfterTest(alwaysRun = true)
     protected void tearDown() {
         quitDriver();
     }
