@@ -40,9 +40,4 @@ public class LoginDataProviderTest extends BaseTest {
                 {"wrong_user", "wrong_password", false}
         };
     }
-
-    @AfterTest
-    public void quit() {
-        quitDriver();
-    }
 }
