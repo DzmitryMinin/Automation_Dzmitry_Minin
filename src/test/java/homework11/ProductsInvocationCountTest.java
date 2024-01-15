@@ -31,7 +31,7 @@ public class ProductsInvocationCountTest extends BaseTest {
     public void addAndRemoveProducts() {
         productPage = new ProductPage();
         cartPage = new CartPage();
-        productPage.clickAddToCart("Sauce Labs Bike Light");
+        productPage.clickAddToCart("");
         cartPage.openCart();
         cartPage.verifyPage();
         cartPage.removeItem("Sauce Labs Bike Light");
