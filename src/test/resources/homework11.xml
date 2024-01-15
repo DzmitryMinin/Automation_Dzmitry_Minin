@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="homework 11">
+    <test name="Success Login test">
+        <classes>
+            <class name="homework11.SuccessLoginTest"/>
+        </classes>
+    </test>
+    <test name="Products Data Provider Test">
+        <classes>
+            <class name="homework11.ProductsDataProviderTest"></class>
+        </classes>
+    </test>
+    <test name="Products Invocation Count Test">
+        <classes>
+            <class name="homework11.ProductsInvocationCountTest"/>
+        </classes>
+    </test>
+</suite>

@@ -34,3 +34,7 @@ replay_pid*
 /target/maven-archiver/pom.properties
 /target/maven-status/maven-compiler-plugin/testCompile/default-testCompile/inputFiles.lst
 /target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst
+
+
+/allure-report
+/allure-results
