@@ -9,6 +9,9 @@ import org.openqa.selenium.support.ui.WebDriverWait;
 
 import java.time.Duration;
 import java.util.Arrays;
+import java.util.Collection;
+import java.util.List;
+import java.util.stream.Collectors;
 
 import static driver.DriverCreation.getDriver;
 
@@ -29,13 +32,12 @@ public abstract class BasePage {
     }
 
     protected void click(By by) {
-        wait.until(ExpectedConditions.elementToBeClickable(by));
         click(driver.findElement(by));
     }
 
     protected void click(WebElement element) {
         System.out.println("Click on element: " + element);
-        wait.until(ExpectedConditions.elementToBeClickable(element));
+        wainUntilElementToBeClickable(element);
         element.click();
     }
 
@@ -47,5 +49,35 @@ public abstract class BasePage {
         System.out.println("Enter in: " + element + ", next values: " + Arrays.toString(charSequences));
         element.clear();
         element.sendKeys(charSequences);
+    }
+
+    protected void waitUntilTextToBe(By by, String expectedText) {
+        System.out.println("Wait until text to be: " + expectedText);
+        wait.until(ExpectedConditions.textToBe(by, expectedText));
+    }
+
+    protected void wainUntilElementToBeClickable(By by) {
+        wainUntilElementToBeClickable(driver.findElement(by));
+    }
+
+    protected void wainUntilElementToBeClickable(WebElement element) {
+        System.out.println("Wait until element to be clickable: " + element);
+        wait.until(ExpectedConditions.elementToBeClickable(element));
+    }
+
+    protected String getElementText(By by) {
+        return getElementText(driver.findElement(by));
+    }
+
+    protected String getElementText(WebElement webElement) {
+        return webElement.getText();
+    }
+
+    protected List<String> getElementTexts(By by) {
+        return getElementTexts(driver.findElements(by));
+    }
+
+    protected List<String> getElementTexts(List<WebElement> webElement) {
+        return webElement.stream().map(data -> data.getText()).collect(Collectors.toList());
     }
 }
