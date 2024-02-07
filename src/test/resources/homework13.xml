@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="homework 13">
+    <test name="Sauce Demo Login Test" enabled="false">
+        <classes>
+            <class name="homework13.LoginTest"/>
+        </classes>
+    </test>
+
+    <test name="Sauce Demo Product Page Test" enabled="false">
+        <classes>
+            <class name="homework13.ProductPageFactoryTest"/>
+        </classes>
+    </test>
+
+    <test name="Value Object Test" enabled="false">
+        <classes>
+            <class name="homework13.ValueObject"/>
+        </classes>
+    </test>
+
+    <test name="Cart Page Test">
+        <classes>
+            <class name="homework13.CartPageTest"/>
+        </classes>
+    </test>
+
+    <test name="Cart Page Builder Test">
+        <classes>
+            <class name="homework13.CartPageBuilderTest"/>
+        </classes>
+    </test>
+</suite>
