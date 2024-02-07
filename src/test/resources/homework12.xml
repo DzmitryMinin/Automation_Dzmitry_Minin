@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="homework 12">
+    <parameter name="item" value="SORTABLE_DATA_TABLES"></parameter>
+    <test name="Sortable data table test">
+        <classes>
+            <class name="homework12.HomePageTest"/>
+            <class name="homework12.SortableDataTablesTest"/>
+            <class name="homework12.ConvertToGmailTest"/>
+        </classes>
+    </test>
+</suite>
