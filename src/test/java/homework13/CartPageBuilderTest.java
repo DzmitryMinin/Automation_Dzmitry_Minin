@@ -42,16 +42,16 @@ public class CartPageBuilderTest extends BaseTest {
     @DataProvider(name = "get product builder")
     public Object[][] getProductDataBuilder() {
         return new Object[][]{
-                {new ProductBuilder.Builder()
+                {ProductBuilder.builder()
                         .withProduct("Sauce Labs Bolt T-Shirt")
                         .build()},
-                {new ProductBuilder.Builder()
+                {ProductBuilder.builder()
                         .withProduct("Sauce Labs Bike Light")
                         .build()},
-                {new ProductBuilder.Builder()
+                {ProductBuilder.builder()
                         .withProduct("Sauce Labs Bolt T-Shirt")
                         .build()},
-                {new ProductBuilder.Builder()
+                {ProductBuilder.builder()
                         .withProduct("Sauce Labs Fleece Jacket")
                         .build()},
         };

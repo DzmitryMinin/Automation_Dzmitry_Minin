@@ -1,5 +1,6 @@
 package homework12;
 
+import lombok.extern.log4j.Log4j;
 import org.testng.annotations.Test;
 import pageObjects.baseObjects.BaseTest;
 
@@ -8,6 +9,7 @@ import java.util.Arrays;
 import java.util.Collections;
 import java.util.List;
 
+@Log4j
 public class SortElementsTest extends BaseTest {
     @Test
     public void sortElements() {
@@ -17,6 +19,6 @@ public class SortElementsTest extends BaseTest {
             sorted_list.add(Math.abs(element));
         }
         Collections.sort(sorted_list);
-        System.out.println(sorted_list);
+        log.info(sorted_list);
     }
 }

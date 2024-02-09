@@ -1,5 +1,6 @@
 package pageObjects.herokuapp;
 
+import lombok.extern.log4j.Log4j;
 import org.openqa.selenium.By;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.testng.Assert;
@@ -7,6 +8,7 @@ import pageObjects.baseObjects.BasePage;
 
 import static org.openqa.selenium.support.ui.ExpectedConditions.*;
 
+@Log4j
 public class Frames extends BasePage {
     private final By header = By.tagName("h3");
     private final By frame = By.id("mce_0_ifr");
@@ -30,7 +32,7 @@ public class Frames extends BasePage {
     }
 
     public void enterText(String text) {
-        System.out.println(driver.findElement(textField).getText());
+        log.info(driver.findElement(textField).getText());
         sendKeys(textField, text);
     }
 
