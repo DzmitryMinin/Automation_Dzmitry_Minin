@@ -7,6 +7,7 @@ import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.firefox.FirefoxOptions;
 import org.openqa.selenium.ie.InternetExplorerDriver;
 import org.openqa.selenium.ie.InternetExplorerOptions;
+import propertyUtils.PropertyReader;
 
 import java.time.Duration;
 
@@ -18,7 +19,7 @@ public class DriverCreation {
             switch (type) {
                 case CHROME:
                     ChromeOptions options = new ChromeOptions();
-                    options.addArguments("start-maximized");
+                    options.addArguments(PropertyReader.getProperties().getProperty("browser.option").split(";"));
                     webDriver = new ChromeDriver(options);
                     break;
                 case FIREFOX:
