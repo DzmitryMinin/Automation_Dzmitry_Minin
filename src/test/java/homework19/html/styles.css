@@ -1,0 +1,33 @@
+body {
+    background-color: powderblue;
+}
+h1 {
+    color: blue;
+}
+p {
+    color: red;
+}
+
+.border-table {
+    border: 2px solid black;
+    border-collapse: collapse;
+}
+
+.border-table td {
+    padding: 10px;
+}
+
+ input[type="checkbox"] {
+    margin-right: 5px;
+ }
+
+ .button {
+    background-color: #04AA6D;
+    border: none;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+ }

@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="homework18">
+    <listeners>
+        <listener class-name="testngUtils.SelenideListener"/>
+    </listeners>
+    <test name="homework18">
+        <classes>
+            <class name="homework18.RunRabotaTests"/>
+        </classes>
+    </test>
+</suite>
