@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="homework 17">
+    <test name="Route Tests">
+        <classes>
+            <class name="homework17.RouteTests"/>
+        </classes>
+    </test>
+    <test name="Station Tests">
+        <classes>
+            <class name="homework17.StationTests"/>
+        </classes>
+    </test>
+</suite>
